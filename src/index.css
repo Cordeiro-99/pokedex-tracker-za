@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #0f0f0f;
+  color: #e0e0e0;
+}
+
+/* Fundo com gradiente escuro estilo DeepSeek */
+.pokemon-bg {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(255, 119, 198, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+}
+
+/* Animações para os cards */
+.pokemon-card {
+  transition: all 0.3s ease-in-out;
+  background: #1a1a1a;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Scrollbar estilo escuro */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Cores específicas para tipos Pokémon (versão escura) */
+.type-bug { background-color: #A8B820; }
+.type-dark { background-color: #705848; }
+.type-dragon { background-color: #7038F8; }
+.type-electric { background-color: #F8D030; color: #000; }
+.type-fairy { background-color: #EE99AC; }
+.type-fighting { background-color: #C03028; }
+.type-fire { background-color: #F08030; }
+.type-flying { background-color: #A890F0; }
+.type-ghost { background-color: #705898; }
+.type-grass { background-color: #78C850; }
+.type-ground { background-color: #E0C068; color: #000; }
+.type-ice { background-color: #98D8D8; color: #000; }
+.type-normal { background-color: #A8A878; }
+.type-poison { background-color: #A040A0; }
+.type-psychic { background-color: #F85888; }
+.type-rock { background-color: #B8A038; }
+.type-steel { background-color: #B8B8D0; color: #000; }
+.type-water { background-color: #6890F0; }
