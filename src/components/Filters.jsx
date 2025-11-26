@@ -1,6 +1,23 @@
 const allTypes = [
-  'All','Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground',
-  'Flying','Psychic','Bug','Rock','Ghost','Dark','Dragon','Steel','Fairy'
+  { value: 'All', label: '📋 Todos os Tipos' },
+  { value: 'Normal', label: '😐 Normal' },
+  { value: 'Fire', label: '🔥 Fire' },
+  { value: 'Water', label: '💧 Water' },
+  { value: 'Electric', label: '⚡ Electric' },
+  { value: 'Grass', label: '🌿 Grass' },
+  { value: 'Ice', label: '❄️ Ice' },
+  { value: 'Fighting', label: '🥊 Fighting' },
+  { value: 'Poison', label: '☠️ Poison' },
+  { value: 'Ground', label: '🏜️ Ground' },
+  { value: 'Flying', label: '🕊️ Flying' },
+  { value: 'Psychic', label: '🔮 Psychic' },
+  { value: 'Bug', label: '🐛 Bug' },
+  { value: 'Rock', label: '🪨 Rock' },  // ✅ Corrigido
+  { value: 'Ghost', label: '👻 Ghost' },
+  { value: 'Dark', label: '🌑 Dark' },
+  { value: 'Dragon', label: '🐉 Dragon' },
+  { value: 'Steel', label: '⚙️ Steel' },
+  { value: 'Fairy', label: '🧚 Fairy' }
 ]
 
 export default function Filters({ query, onQuery, typeFilter, onType, showOnlyMissing, onShowOnlyMissing }) {
@@ -22,9 +39,9 @@ export default function Filters({ query, onQuery, typeFilter, onType, showOnlyMi
         onChange={(e) => onType(e.target.value)} 
         className="p-3 rounded-xl bg-gray-800 border-2 border-gray-700 focus:border-red-500 focus:outline-none transition-colors text-white w-full md:w-auto"
       >
-        {allTypes.map(t => (
-          <option key={t} value={t} className="bg-gray-800">
-            {t === 'All' ? '📋 Todos os Tipos' : `⚡ ${t}`}
+        {allTypes.map(type => (
+          <option key={type.value} value={type.value} className="bg-gray-800">
+            {type.label}
           </option>
         ))}
       </select>

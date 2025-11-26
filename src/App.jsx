@@ -44,7 +44,7 @@ export default function App() {
   const missing = total - captured
 
   return (
-    <div className="min-h-screen pokemon-bg p-4 md:p-6">
+<div className="min-h-screen pokemon-bg-colorful p-4 md:p-6">
       <div className="max-w-7xl mx-auto">
         <Header total={total} captured={captured} />
 
