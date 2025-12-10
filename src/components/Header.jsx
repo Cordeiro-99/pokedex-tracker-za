@@ -12,7 +12,7 @@ export default function Header({ total, captured }) {
           </div>
           <div>
             <h1 className="text-2xl md:text-3xl font-bold">Legends Z-A Pokédex</h1>
-            <p className="text-red-100 text-sm">Acompanha a tua jornada</p>
+            <p className="text-red-100 text-sm">Acompanha a tua jornada em Lumiose City</p>
           </div>
         </div>
         
